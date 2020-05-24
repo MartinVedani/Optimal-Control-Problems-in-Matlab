@@ -2,7 +2,7 @@
 
 The problems were solved using DIDO©, a MATLAB® toolbox for solving optimal control problems.<sup>1</sup>  DIDO implements a guess-free,<sup>2</sup>  fast spectral algorithm based on pseudospectral optimal control theory.<sup> 3</sup>  In this approach, all functions are expanded in terms of an infinite series of special basis functions, and then truncated to a convergence tolerance.<sup>3</sup>  No knowledge of pseudospectral methods is necessary to use the software. Results from the widely-used <sup>4-6</sup>  toolbox are independently verifiable for feasibility and optimality. There are several techniques to verify the validity of a DIDO run; these are described in detail in [1].
 
-– Input to DIDO is the problem formulation.
+- Input to DIDO is the problem formulation.
 
 Input syntax: <code> dido(problem, algorythm) </code>
 
@@ -12,8 +12,7 @@ where <code> problem </code> defines the struture, bounds, and search space and 
 
 Output syntax: <code> [cost, primal, dual] </code>
 
-where <code> cost </code> is the variable to be minimized (or maximized multiplied by -1);
-<code> primal, dual </code> are the candidate solutions and <code> dual </code> also serves to verify if the candidate solution satisfies Pontryagin's Principle. If they do not, then you certainly do not have an optimal solution. If they do, it does not mean you have an optimal solution (remember Pontryagin’s Principle is a necessary, not sufficient condition). What you have is an “extremal” (candidate optimal).
+where <code>cost</code> is the variable to be minimized (or maximized multiplied by -1); <code>primal, dual</code> are the candidate solutions and <code>dual</code> also serves to verify if the candidate solution satisfies Pontryagin's Principle. If they do not, then you certainly do not have an optimal solution. If they do, it does not mean you have an optimal solution (remember Pontryagin’s Principle is a necessary, not sufficient condition). What you have is an “extremal” (candidate optimal).
 
 References:
 
