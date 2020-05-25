@@ -43,7 +43,7 @@ search.controls   = [0, pi];        % search space for theta
 
 
 %--------
-% Step 3:       % Supply the boundary conditions using event boiunds
+% Step 3:       % Supply the boundary conditions using event bounds
 %--------
 
 bounds.events     = [0, 0;      % x0 = 0
@@ -129,6 +129,11 @@ plot(x, -y);
 title('Generation of Figure 3.4 in Ross');
 xlabel('x'); ylabel('y');
 
+figure; 
+plot(t, [x;y;v]);
+title('Generation of Figure 3.11 in Ross');
+legend('x', 'y', 'v');
+xlabel('t'); ylabel('states');
 
 %---------
 % Step 11:       % Plot/process duals
@@ -145,6 +150,14 @@ title('Generation of Figure 3.5 in Ross');
 legend('\lambda_x', '\lambda_y', '\lambda_v');
 xlabel('t');
 
+H = dual.Hamiltonian;
+
+figure;
+plot(t, H);
+title('Hamiltonian = -1');
+ylabel('H');
+xlabel('t');
+
 %--------
 % Step 12:       % Perform V&V.  This is crtically important.  You should
                  % not trust any solution coming out of any code, including
@@ -152,3 +165,8 @@ xlabel('t');
                  % complete details.  The V&V shows that 10 nodes for the
                  % choice of algorithm was sufficiently accurate.
 %--------
+
+% The x-costate and y-costate trajectories must be constants with regards 
+% to time if the solution is optimal.
+
+% Hamiltonian evolution be a constant, which is -1.
