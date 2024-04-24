@@ -1,4 +1,4 @@
-# Optimal-Control-Problems-in-Matlab
+# Optimal-Control-Problems-in-Matlab (R2021a)
 
 The problems were solved using DIDO©, a MATLAB® toolbox for solving optimal control problems.<sup>1</sup>  DIDO implements a guess-free,<sup>2</sup>  fast spectral algorithm based on pseudospectral optimal control theory.<sup> 3</sup>  In this approach, all functions are expanded in terms of an infinite series of special basis functions, and then truncated to a convergence tolerance.<sup>3</sup>  No knowledge of pseudospectral methods is necessary to use the software. Results from the widely-used <sup>4-6</sup>  toolbox are independently verifiable for feasibility and optimality. There are several techniques to verify the validity of a DIDO run; these are described in detail in [1].
 
